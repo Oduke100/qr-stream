@@ -15,3 +15,6 @@ __pycache__
 
 #I have repurposed this gitignore file as I think alot of my works will be done, not writting a new file, this is the beginning of the new data
 /assets
+
+#well this is a new addittion, a section for all my test files
+test.txt
