@@ -8,6 +8,7 @@ docs/
 #new thing I learnt today, you dont just add like .db you add a * before it its called a wildcard this will make the file watch out for everything with that
 #extensiom
 *.db
+*.bin
 
 #we add a block to the other mambo jumbo that we have had since the commencing of work by our system
 __pycache__
@@ -19,4 +20,5 @@ __pycache__
 #well this is a new addittion, a section for all my test files
 test.txt
 test.py
+test.bin
 
