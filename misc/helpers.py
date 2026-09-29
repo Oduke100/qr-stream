@@ -154,7 +154,7 @@ def checksum(data):
     return data_output
     
 # test=checksum([1, 2, 3])
-test=checksum("Hello")
-print(test)
+# test=checksum("Hello")
+# print(test)
 # polynomial= polynomial_generation()
 # print(polynomial)
