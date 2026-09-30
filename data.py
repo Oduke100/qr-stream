@@ -1,28 +1,30 @@
 # this is where we will have the data manipulation using the BG functions we have written
 
-from misc.helpers import checksum, convert, read_data
+from misc.data_handlers import read_data
+from misc.converter import convert
+from misc.checksum import checksum
+
+"""
+we need to create a matrix class, this will hold;
+1, the most important, the matrix
+2, the order ie x/total - probably in binary
+3, the data, after chunking as the data will most definately be large
+
+"""
 
 class Data:
     def __init__(self, payload):
         self.payload = payload
 
-
-    def chunk(self):
-        # we need a func to chunk the data into sections that will be the transmitted chunks
-        
     def tx(self):
-        # this reads the payload and returns a binary string
-        data = read_data(self.payload)
+        data_state_1 = read_data(self.payload)
 
-        # here we convert the data into binary for the checksum math and construction of full data for tx
-        binary_data = convert(data)
+        data_state_2 = convert(data_state_1)     # this converts the whole raw data to binary
+        data_state_3 = checksum(data_state_1)
 
+        data_state_4 = data_state_2 + data_state_3
+
+        print(len(data_state_4))
         
-        data_checksum = checksum(data)
-
-        tx_data = binary_data + data_checksum
-
-        print(tx_data)
-
 mike=Data("Mike")
-mike.checksum()
+mike.tx()
