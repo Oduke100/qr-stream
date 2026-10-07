@@ -23,8 +23,8 @@ so the data portion will be 96 bytes per frame
 with this data we can confidently chunk the data as we know what size we are chunking it to
 """
 
-from misc.aggregator import data_aggregator
+from misc.frame import frame_data
 
-mike = data_aggregator("The quick brown fox jumps over the lazy dog while the sun sets slowly behind the hills, painting the sky in shades of orange and pink. Birds return to their nests, the river hums a quiet tune, and somewhere far away a lone train whistles into the night.")
+mike = frame_data("The quick brown fox jumps over the lazy dog while the sun sets slowly behind the hills, painting the sky in shades of orange and pink. Birds return to their nests, the river hums a quiet tune, and somewhere far away a lone train whistles into the night.")
 print(mike)
 print(len(mike))
